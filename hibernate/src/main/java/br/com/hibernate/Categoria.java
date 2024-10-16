@@ -9,7 +9,7 @@ public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String categoria;
+    private String nome;
 
     // GETTERS, SETTERS E CONSTRUTOR
 
@@ -21,16 +21,16 @@ public class Categoria {
         this.id = id;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getNome() {
+        return nome;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public Categoria(String categoria) {
-        this.categoria = categoria;
+    public Categoria(String nome) {
+        this.nome = nome;
     }
 
     public Categoria(){

@@ -7,12 +7,15 @@ import javax.persistence.EntityManager;
 
 public class Main {
     public static void main(String[] args) {
-
-        // Criando o entidy manager
         EntityManager entityManager = JPAUtil.getEntityManager();
 
-       MaterialDAO materialDAO = new MaterialDAO(entityManager);
-       Material material = materialDAO.buscarPorID(1);
-        System.out.println(material.getNome());
+        MaterialDAO materialDAO = new MaterialDAO(entityManager);
+
+
+        var buscarPorFornecedorPorNome = materialDAO.buscarPorFornecedorPorNome("Caneta");
+        System.out.println(buscarPorFornecedorPorNome);
+
+        entityManager.close();
+
     }
 }
